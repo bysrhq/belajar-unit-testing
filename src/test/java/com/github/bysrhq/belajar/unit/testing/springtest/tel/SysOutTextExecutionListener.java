@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.bysrhq.belajar.unit.testing.springtest;
+package com.github.bysrhq.belajar.unit.testing.springtest.tel;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.TestContext;

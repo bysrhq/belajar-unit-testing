@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.bysrhq.belajar.unit.testing.springtest;
+package com.github.bysrhq.belajar.unit.testing.springtest.tel;
+
+import org.springframework.context.annotation.Configuration;
 
 /**
  *
  * @author bysrhq
  */
-public interface CalculatorService {
-    public double add(double operandOne, double operandTwo);
+@Configuration
+public class AppConfig {
+    
 }

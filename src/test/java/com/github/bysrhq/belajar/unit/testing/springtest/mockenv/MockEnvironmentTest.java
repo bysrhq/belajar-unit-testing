@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.bysrhq.belajar.unit.testing.springtest;
+package com.github.bysrhq.belajar.unit.testing.springtest.mockenv;
 
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
@@ -16,18 +19,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author bysrhq
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {AppConfig.class})
-@TestExecutionListeners({SysOutTextExecutionListener.class})
-public class SystOutTextExecutionTest {
+@ContextConfiguration(classes = {MockAppConfig.class})
+public class MockEnvironmentTest {
+    @Autowired
+    ApplicationContext ctx;
     
     @Test
-    public void someTest() {
-        System.out.println("Execute some test.");
+    public void environment() {
+        System.out.print(ctx.getBean("message"));
     }
-    
-    @Test
-    public void someOtherTest() {
-    System.out.println("Execute some other test.");
-    }
-    
 }
